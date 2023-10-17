@@ -46,13 +46,19 @@ const Todo = () => {
   return (
     <>
       <div className="flex items-center justify-center flex-col">
+        <h1 className="text-[50px] font-bold text-slate-500">TODO APP</h1>
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="flex items-center justify-center flex-col border-2 border-black rounded-xl shadow-2xl shadow-slate-400 w-[20vw] h-[50vh] mt-[5%] p-[5%]"
+          className="flex items-center justify-center flex-col border-2 border-gray-600 rounded-xl shadow-2xl shadow-slate-400 w-[20vw] h-[50vh] mt-[2%] p-[5%]"
         >
           <div className="flex items-center justify-center flex-col mt-[25%]">
             <div className="text-center mt-[-45%]">
-              <label htmlFor="NoteTask">Note Task</label>
+              <label
+                htmlFor="NoteTask"
+                className="font-extrabold text-gray-600"
+              >
+                Note Task:
+              </label>
               <div className="text-center ">
                 <input
                   type="text"
@@ -64,7 +70,9 @@ const Todo = () => {
               </div>
             </div>
             <div className="text-center mt-[5%]">
-              <label htmlFor="Date">Date</label>
+              <label htmlFor="Date" className="font-extrabold text-gray-600">
+                Date:
+              </label>
               <div>
                 <input
                   type="date"
@@ -81,7 +89,7 @@ const Todo = () => {
               className="border-[2px]  mt-[10%] w-[3vw] h-[5vh] rounded-[10px] bg-green-400 text-white flex items-center justify-center"
               onClick={() => AddTaskCard(InputField)}
             >
-              <BsPlusLg className="text-center" size={30}/>
+              <BsPlusLg className="text-center" size={30} />
             </button>
           </div>
         </form>

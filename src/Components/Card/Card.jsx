@@ -30,6 +30,7 @@ const Card = ({ stateData, ReducerDispatch }) => {
             <input
               type="text"
               name="TaskField"
+              className="mt-2 border-[2px] border-slate-300 rounded-md"
               value={stateData.Task}
               onChange={(e) =>
                 EditData({
@@ -47,6 +48,7 @@ const Card = ({ stateData, ReducerDispatch }) => {
             <input
               type="date"
               name="DateField"
+              className="mt-2 border-[2px] border-slate-300 rounded-md"
               value={stateData.Date}
               onChange={(e) =>
                 EditData({
@@ -60,7 +62,7 @@ const Card = ({ stateData, ReducerDispatch }) => {
         <div>
           <div>
             <button
-              className="w-[20px] h-[20px] text-center rounded-[50%] bg-[rgb(244,78,78)] p-[2px] border-[1px] border-slate-400"
+              className="mt-2 w-[20px] h-[20px] text-center rounded-[50%] bg-[rgb(244,78,78)] p-[2px] border-[1px] border-slate-400"
               onClick={() => DeleteTask(stateData.id)}
             >
               <BsTrash3 />
